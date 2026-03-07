@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}
+    УниверEasy - Главная
+{% endblock %}
+
+{% block head %}
+    Добро пожаловать на сайт УниверEasy!
+{% endblock %}
+
+{% block main %}
+    <br><p>Здесь вы сможете поискать ГОТОВЫЕ работы для вашего направления обучения и дисциплины.</p>
+    <p>Или же помочь другим студентам и залить готовые работы, которые вы уже когда-то написали!</p>
+    <p>Прежде чем приступить, настоятельно рекомендуем вам ознакомиться с <a href="/about">нашим проектом.</a>
+    <br>Выберите что вы хотите сделать:</p>
+    <br>
+    <div class="button-group-vertical">
+        <a href="/upload" class="btn-pill large-button">Залить свою работу</a>
+        <a href="/univers-select" class="btn-pill large-button">Найти готовую работу</a>
+    </div>
+{% endblock %}

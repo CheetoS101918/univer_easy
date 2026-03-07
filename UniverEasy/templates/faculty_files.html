@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+
+{% block title %}
+    УниверEasy-Работы {{ faculty.name }}
+{% endblock %}
+
+{% block head %}
+    Работы {{ faculty.name }}
+{% endblock %}
+
+{% block main %}
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
+                     <th>Тема</th>
+                    <th>Вариант</th>
+                    <th>Курс</th>
+                    <th>Дисциплина</th>
+                    <th>Степень</th>
+                    <th>Форма обучения</th>
+                    <th>Файл</th>
+                    <th>Дата загрузки</th>
+                </tr>
+             </thead>
+             <tbody>
+                {% for f in faculty.files.all %}
+                    <tr>
+                        <td>{{ f.theme }}</td>
+                        <td>{{ f.variant }}</td>
+                        <td>{{ f.course }}</td>
+                        <td>{{ f.discipline }}</td>
+                        <td>{{ f.degree }}</td>
+                        <td>{{ f.edu_form }}</td>
+                        <td><a href="{{ f.file.url }}" download>Скачать</a></td>
+                        <td>{{ f.uploaded_at | date:"d.m.Y H:i" }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}

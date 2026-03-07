@@ -1,0 +1,363 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: #333;
+    background-color: #f0f0f0;
+    line-height: 1.6;
+}
+
+.page-container {
+    display: flex;
+    min-height: 100vh;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #E4E2F6;
+    color: #5353C6;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.1);
+}
+
+.sidebar-header {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #5353C6;
+}
+
+.sidebar-header h1 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.sidebar-nav {
+    margin-top: 20px;
+}
+
+.sidebar-nav ul {
+    list-style: none;
+}
+
+.sidebar-nav li {
+    margin-bottom: 10px;
+    font-size: 1.15rem;
+}
+
+.sidebar-nav a {
+    display: block;
+    padding: 10px 15px;
+    text-decoration: none;
+    color: #5353C6;
+    font-weight: bold;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.sidebar-nav a:hover {
+    background-color: #4F97C4;
+    color: white;
+}
+
+.content-wrapper {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex-grow: 1;
+    padding: 40px;
+}
+
+.site-footer {
+    background-color: #f0f0f0;
+    padding: 20px 40px;
+    border-top: 1px solid #ccc;
+    text-align: center;
+}
+
+.footer-grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.button-group-vertical {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.btn-pill.large-button {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    text-align: center;
+    min-width: 250px;
+    border-radius: 50px;
+    border: 2px solid #5353C6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+    text-decoration: none;
+}
+
+
+.btn-pill.large-button:hover {
+    background-color: #5353C6;
+    color: white;
+}
+
+@media (max-width: 768px) {
+    .page-container {
+        flex-direction: column;
+    }
+    .sidebar {
+        width: 100%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .sidebar-nav ul {
+        display: flex;
+        gap: 10px;
+    }
+    .main-content {
+        padding: 20px;
+    }
+    .footer-grid {
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .sidebar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .sidebar-nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+    .btn-pill.large-button {
+        min-width: 100%;
+    }
+}
+
+.navbar {
+    background-color: #E4E2F6 !important;
+}
+.navbar-brand, .nav-link {
+    color: #5353C6 !important;
+    font-weight: bold;
+}
+.nav-link:hover {
+    background-color: #4F97C4 !important;
+    color: white !important;
+    border-radius: 5px;
+}
+.navbar-toggler {
+    border-color: #5353C6 !important;
+}
+.navbar-toggler-icon {
+    background-image: none !important;
+    width: 24px;
+    height: 2px;
+    background-color: #5353C6;
+    box-shadow: 0 6px 0 #5353C6, 0 -6px 0 #5353C6;
+}
+
+.upload-card .card {
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid rgba(83,83,198,0.08);
+    background: #ffffff;
+}
+
+.upload-card .card-body {
+    padding: 1.25rem;
+}
+
+.card-title {
+    color: #5353C6;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.35rem;
+    font-weight: 700;
+    color: #5353C6;
+    font-size: 0.95rem;
+}
+
+.form-control {
+    border-radius: 8px;
+    border: 1px solid rgba(83,83,198,0.18);
+    padding: 0.55rem 0.65rem;
+    background: #fff;
+}
+
+input[type="file"].form-control {
+    padding: 0.35rem;
+    background: #E4E2F6;
+    color: #5353C6;
+    border: 1px solid rgba(83,83,198,0.18);
+    cursor: pointer;
+}
+
+input[type="file"].form-control:hover {
+    background: #d8d6f2;
+}
+
+.form-text {
+    margin-top: 0.35rem;
+    color: #666;
+    font-size: 0.85rem;
+}
+
+.errorlist {
+    margin-top: 0.35rem;
+    color: #c0392b;
+    list-style: none;
+    padding-left: 0;
+    font-size: 0.9rem;
+}
+
+.btn-pill.large-button {
+    background: transparent;
+    color: #5353C6;
+    border: 2px solid #5353C6;
+    padding: 12px 36px;
+    font-weight: 700;
+    border-radius: 50px;
+    transition: background-color 0.25s ease, color 0.25s ease, transform 0.06s ease;
+}
+
+.btn-pill.large-button:hover {
+    background: #5353C6;
+    color: #ffffff;
+    transform: translateY(-1px);
+}
+
+@media (max-width: 576px) {
+    .upload-card .card-body {
+        padding: 0.9rem;
+    }
+}
+.table-container {
+    width: 100%;
+    overflow-x: auto;
+    margin-top: 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+table {
+    width: 100%; /* Таблица занимает всю ширину контейнера */
+    border-collapse: collapse; /* Убираем промежутки между ячейками */
+    text-align: left;
+}
+
+thead {
+    background-color: #5353C6; /* Фиолетовый фон из твоей палитры */
+    color: white; /* Белый текст */
+    border-radius: 8px 8px 0 0; /* Скругление верхних углов */
+}
+
+th, td {
+    padding: 12px 15px; /* Внутренние отступы в ячейках */
+    border-bottom: 1px solid #E4E2F6; /* Легкая серая линия между строками */
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+td a {
+    color: #4F97C4;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+td a:hover {
+    text-decoration: underline;
+}
+
+tbody tr td:first-child {
+    font-weight: bold;
+}
+
+.text-variant-5 h1, .text-variant-5 h2 {
+    color: #5353C6;
+    font-weight: 700;
+    position: relative;
+}
+
+p {
+    color: #333;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    margin-bottom: 1.5em; /* Добавляем отступ после каждого абзаца */
+}
+
+a:not(.btn-pill) {
+    color: #5353C6; /* Используем яркий фиолетовый цвет для ссылок */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-bottom: 2px solid transparent; /* Прозрачная граница для плавного эффекта */
+    transition: border-bottom 0.2s ease;
+}
+
+a:not(.btn-pill):hover {
+    border-bottom: 2px solid #5353C6; /* При наведении появляется подчеркивание */
+}
+
+.main-content ul {
+    list-style: none; /* Убираем стандартные маркеры браузера */
+    padding-left: 20px; /* Добавляем отступ для кастомных маркеров */
+    margin-bottom: 1.5em;
+}
+
+.main-content ul li {
+    /* Делаем текст внутри списка таким же, как и остальной текст */
+    color: #333;
+    font-size: 1.15rem;
+
+    border-bottom: 1px solid #E4E2F6; /* Тонкая серая линия между пунктами */
+    padding: 10px 0; /* Отступы сверху и снизу */
+    margin-bottom: 0; /* Убираем отступ между пунктами */
+    position: relative; /* Необходимо для позиционирования маркера */
+}
+
+/* Создаем кастомный маркер с помощью псевдоэлемента ::before */
+.main-content ul li::before {
+    content: '\2022'; /* Код для жирной точки */
+    color: #5353C6; /* Используем фиолетовый цвет для маркеров */
+    font-size: 1.5rem; /* Размер маркера */
+    line-height: 1; /* Выравнивание по центру */
+    position: absolute; /* Позиционируем маркер относительно пункта */
+    left: -20px; /* Сдвигаем маркер влево, чтобы он был за пределами текста */
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+/* При наведении на пункт списка он будет подсвечиваться */
+.main-content ul li:hover {
+    background-color: #f9f9f9;
+}
+

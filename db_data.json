@@ -1,0 +1,82 @@
+{
+  "UniverEasy_univer": [
+    {
+      "id": 1,
+      "name": "ПГТУ",
+      "slug": "pstu"
+    },
+    {
+      "id": 2,
+      "name": "МГУ",
+      "slug": "msu"
+    }
+  ],
+  "UniverEasy_faculty": [
+    {
+      "id": 1,
+      "name": "УНИСТ",
+      "slug": "unist",
+      "univer_id": 1
+    },
+    {
+      "id": 2,
+      "name": "УНИИТ",
+      "slug": "uniit",
+      "univer_id": 1
+    },
+    {
+      "id": 3,
+      "name": "УНИЭМ",
+      "slug": "uniem",
+      "univer_id": 1
+    },
+    {
+      "id": 4,
+      "name": "ИСПО",
+      "slug": "ispo",
+      "univer_id": 1
+    },
+    {
+      "id": 5,
+      "name": "ФТЛ",
+      "slug": "ftl",
+      "univer_id": 1
+    },
+    {
+      "id": 6,
+      "name": "СГФ",
+      "slug": "sgf",
+      "univer_id": 1
+    },
+    {
+      "id": 7,
+      "name": "ИСАиЖКХ",
+      "slug": "isaizhkh",
+      "univer_id": 1
+    },
+   {
+      "id": 8,
+      "name": "Факультет экономики, управления и права",
+      "slug": "fakultet-ekonomiki-upravleniya-i-prava",
+      "univer_id": 2
+    },
+    {
+      "id": 9,
+      "name": "Факультет филологии и массовых коммуникаций",
+      "slug": "fakultet-filologii-i-massovyh-kommunikatsiy",
+      "univer_id": 2
+    },
+    {
+      "id": 10,
+      "name": "Факультет гуманитарных и социальных наук",
+      "slug": "fakultet-gumanitarnyh-i-sotsialnyh-nauk",
+      "univer_id": 2
+    },
+    {
+      "id": 11,
+      "name": "Педагогический факультет",
+      "slug": "pedagogicheskiy-fakultet",
+      "univer_id": 2
+    }
+  ]
+}

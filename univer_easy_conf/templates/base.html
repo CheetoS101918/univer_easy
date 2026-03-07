@@ -1,0 +1,61 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> {% block title %} Title {% endblock %} </title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    </head>
+    <body>
+        <div class="page-container">
+            <aside class="sidebar">
+                <header class="sidebar-header">
+                    <h1>УниверEasy</h1>
+                </header>
+                <nav class="sidebar-nav">
+                    <ul>
+                        <li><a href="/">Главная</a></li>
+                        <li><a href="/about">О нас</a></li>
+                        <li><a href="/upload">Залить свою работу</a></li>
+                    </ul>
+                </nav>
+            </aside>
+            <div class="content-wrapper">
+                <main class="main-content">
+                  <div class="text-variant-5">
+                    <h1>
+                    {% block head %}
+                        Header
+                    {% endblock %}
+                    </h1>
+                    {% block main %}
+                        <p> smth for main page as an example</p>
+                    {% endblock %}
+                  </div>
+                </main>
+                <footer class="site-footer">
+                    {% block footer %}
+                        <div class="footer-grid">
+                            <div class="footer-section">
+                                <h3>Контакты</h3>
+                                <p>Email: info@example.com</p>
+                            </div>
+                            <div class="footer-bottom">
+                                <p>&copy; 2025 Example Company. Все права защищены.</p>
+                                <ul class="legal">
+                                    <li><a href="/privacy">Политика конфиденциальности</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    {% endblock %}
+                </footer>
+            </div>
+        </div>
+    </body>
+</html>

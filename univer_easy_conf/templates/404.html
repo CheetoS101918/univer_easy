@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Страница не найдена</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background: #f8f9fa;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            background: linear-gradient(to bottom, #ffffff, #f0f2f5);
+            position: relative;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            flex-grow: 1;
+            width: 100%;
+            padding-top: 1vh; /* Поднимаем контент выше */
+            transform: translateY(-15%); /* Дополнительный подъём */
+        }
+
+        h1 {
+            font-size: 6rem;
+            color: #343a40;
+            text-shadow: 3px 3px 6px rgba(0,0,0,0.15);
+            margin-bottom: 1.5rem;
+            animation: float 3s ease-in-out infinite;
+        }
+
+        .subtitle {
+            font-size: 2rem;
+            color: #6c757d;
+            margin-bottom: 2rem;
+        }
+
+        .image-container {
+            margin-top: 2rem;
+            max-width: 90%;
+            padding: 10px;
+        }
+
+        .error-image {
+            max-width: 100%;
+            height: 350px;
+            display: block;
+            margin: 0 auto;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+            transition: transform 0.3s ease;
+        }
+
+        .error-image:hover {
+            transform: scale(1.02);
+        }
+
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-15px); }
+            100% { transform: translateY(0px); }
+        }
+
+        @media (max-width: 768px) {
+            h1 { font-size: 4rem; }
+            .subtitle { font-size: 1.5rem; }
+            .content { padding-top: 15vh; }
+            .error-image { max-height: 250px; }
+        }
+
+        @media (max-width: 480px) {
+            h1 { font-size: 3rem; }
+            .subtitle { font-size: 1.2rem; }
+            .error-image { max-height: 200px; }
+        }
+    </style>
+</head>
+<body>
+    <div class="content">
+        <h1>404</h1>
+        <p class="subtitle">страница не найдена</p>
+
+        <div class="image-container">
+            <img
+                src="static/img/img.png"
+                alt="Декор 404 страницы"
+                class="error-image"
+                onerror="this.style.display='none'"
+            >
+        </div>
+    </div>
+</body>
+</html>

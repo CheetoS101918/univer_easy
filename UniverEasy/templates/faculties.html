@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+    УниверEasy - Выбор Факультета
+{% endblock %}
+
+{% block head %}
+    <h1>Выберите свой факультет:</h1>
+{% endblock %}
+
+{% block main %}
+
+    <div class="button-group-vertical">
+        {% for f in unik.faculties.all %}
+            <a href="{% url 'facs_files' f.slug %}" class="btn-pill large-button">{{ f.name }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}

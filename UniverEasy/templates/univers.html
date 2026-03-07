@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+
+{% block title %}
+    УниверEasy - Выбор Университета
+{% endblock %}
+
+{% block head %}
+    <h1>Выберите свой университет:</h1>
+{% endblock %}
+
+{% block main %}
+
+    <div class="button-group-vertical">
+        {% for u in univers %}
+            <a href="{% url 'univer_facs' u.slug %}" class="btn-pill large-button">{{ u.name }}</a>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
