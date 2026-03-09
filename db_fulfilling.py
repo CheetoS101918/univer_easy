@@ -56,7 +56,7 @@ def fill_unik(all_data):
 
 
 def fill_facs(all_data):
-    facs_data = all_data['UniverEasy_faculty'][8:]
+    facs_data = all_data['UniverEasy_faculty']
 
     for f in facs_data:
         Faculty.objects.create(**f)
@@ -64,7 +64,7 @@ def fill_facs(all_data):
     series_facs = Faculty.objects.all()
     Faculty.objects.bulk_update(series_facs, ['name', 'slug', 'univer_id'])
 
-fill_unik(data)
+#fill_unik(data)
 fill_facs(data)
 
 

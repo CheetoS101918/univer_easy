@@ -51,6 +51,7 @@ class FileWork(models.Model):
     class Education_form(models.TextChoices):
         DISTANT = 'distant', 'заочная'
         FULL_TIME = 'full-time', 'очная'
+        MIXED = 'mixed', 'очно-заочная'
 
     class Course(models.IntegerChoices):
         FIRST = 1, '1 курс'
